@@ -24,7 +24,7 @@ function App() {
   }, [file]);
 
   return (
-    <div className="app">
+    <div>
       <Navbar />
       {image ? (
         <NewPost image={image} />
@@ -32,7 +32,7 @@ function App() {
         <div className="newPostCard">
           <div className="addPost">
             <img
-              src="https://images.pexels.com/photos/18398361/pexels-photo-18398361/free-photo-of-kadin-model-ayakta-portre-modu.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              src="https://images.pexels.com/photos/9371782/pexels-photo-9371782.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
               alt=""
               className="avatar"
             />
@@ -43,11 +43,23 @@ function App() {
                 className="postInput"
               />
               <label htmlFor="file">
-                <img className="addImg" src="/icons/gallery.png" alt="" />
-                <img className="addImg" src="/icons/map.png" alt="" />
-                <img className="addImg" src="/icons/timetable.png" alt="" />
+                <img
+                  className="addImg"
+                  src="https://cdn.icon-icons.com/icons2/564/PNG/512/Add_Image_icon-icons.com_54218.png"
+                  alt=""
+                />
+                <img
+                  className="addImg"
+                  src="https://icon-library.com/images/maps-icon-png/maps-icon-png-5.jpg"
+                  alt=""
+                />
+                <img
+                  className="addImg"
+                  src="https://d29fhpw069ctt2.cloudfront.net/icon/image/84451/preview.svg"
+                  alt=""
+                />
+                <button>Send</button>
               </label>
-              <button>Send</button>
               <input
                 onChange={(e) => setFile(e.target.files[0])}
                 id="file"
@@ -63,18 +75,3 @@ function App() {
 }
 
 export default App;
-
-    //   canvasRef.current.innerHtml = faceapi.createCanvasFromMedia(imgRef.current);
-    //   faceapi.matchDimensions(canvasRef.current, {
-    //     width,
-    //     height,
-    //   });
-
-    // const resized = faceapi.resizeResults(detections, {
-    //   width,
-    //   height,
-    // });
-
-    // faceapi.draw.drawDetections(canvasRef.current, resized);
-    // faceapi.draw.drawFaceExpressions(canvasRef.current, resized);
-    // faceapi.draw.drawFaceLandmarks(canvasRef.current, resized);
